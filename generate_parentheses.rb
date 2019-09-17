@@ -9,7 +9,7 @@ end
 def generate_all(current, pos, result)
     if pos == current.length
         if valid(current)
-            result << current.to_s
+            result << current.join("")
         end
     else
         current[pos] = "("
@@ -32,4 +32,5 @@ def valid(current)
     return balance == 0
 end
 
-puts generate_parentheses(4)
+puts generate_parentheses(1)
+
